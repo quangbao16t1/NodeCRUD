@@ -1,0 +1,19 @@
+{
+  "name": "nodecrud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quangbao16t1/NodeCRUD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quangbao16t1/NodeCRUD/issues"
+  },
+  "homepage": "https://github.com/quangbao16t1/NodeCRUD#readme"
+}
