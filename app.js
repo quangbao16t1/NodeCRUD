@@ -1,7 +1,7 @@
 import express from "express";
 
 const app = express();
-const port = 3333;
+const port = 3335;
 
 const waitBlocking = (ms) => {
     const startTime = new Date().getTime();
@@ -23,14 +23,14 @@ const controller1 = async (req, res) => {
     await waitNonBlocking(10000);
     
     console.log(new Date().getTime() - timeoutScheduled);
-    res.status(200).end();
+    // res.status(200).end();
 }
 
 const controller2 = async (req, res) => {
     const timeoutScheduled = Date.now();
     await waitBlocking(10000);
     console.log(new Date().getTime() - timeoutScheduled);
-    res.status(200).end();
+    // res.status(200).end();
 }
 
 
@@ -41,15 +41,9 @@ app.get("/", (req, res) => {
        res.json({
               message: "Hell World"
        });
+       res.status(200).end();
 });
 
 app.listen(port, () => {
-       console.log(`Server is listening on https://localhost:${port}`);
+       console.log(`Server is listening on http://localhost:${port}`);
 });
-// const controller = (req, res) => {
-//     const array = Array.from(Array(1000000).keys());
-//     array.forEach((item) => {
-//         console.log(item);
-//     })
-//     res.status(200).end();
-// }
